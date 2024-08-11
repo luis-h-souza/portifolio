@@ -1,0 +1,14 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.letreiro {
+  display: flex;
+  margin: 10px;
+  }
+
+  .letreiro p {
+    padding-inline: 10px;
+  }
