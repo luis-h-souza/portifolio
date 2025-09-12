@@ -1,60 +1,116 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css" />
-    <title>Portifólio</title>
-  </head>
 
-  <body>
-    <header>
-      <nav>
-        <div>
-          <p>&lt;LHS/&gt; DESENVOLVIMENTO</p>
-        </div>
-        <div>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Skills</a></li>
-            <li><a href="#">Jobs</a></li>
-            <li><a href="#">Contato</a></li>
-          </ul>
-        </div>
-      </nav>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Monda:wght@400..700&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Mulish&display=swap" rel="stylesheet" type='text/css'>
+  <link rel="shortcut icon" href="./src/assets/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="./src/style.css" />
+  <title>Portifólio</title>
+</head>
 
-    <main>
-      <section id="home">
-        <div>
+<body>
+  <header id="header">
+    <nav class="nav">
+      <div class="logo">
+        <p><span>&lt;LHS/&gt;</span></br> DESENVOLVIMENTO</p>
+      </div>
+
+      <div class="menu">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Habilidades</a></li>
+          <li><a href="#">Projetos</a></li>
+          <li><a href="#">Contato</a></li>
+        </ul>
+      </div>
+
+      <div class="download" id="download">
+        <a id="download-cv" class="curriculo" href="./src/assets/doc/Curriculo_DW_v1.pdf"
+          download="Curriculo_DW_v1.pdf">
+          <svg height="40" width="200" xmlns="http://www.w3.org/2000/svg">
+            <rect class="shape" height="40" width="200" />
+            <div class="text">Baixar CV</div>
+          </svg>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home">
+      <div class="hero">
+        <div class="hero-text">
           <h2>FULL STACK</h2>
-          <h1>DEVELOPER</h1>
+          <h1>DESENVOLVEDOR WEB</h1>
           <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo
-            exercitationem iusto, assumenda dicta similique placeat non ipsum
-            odit est dignissimos, rem sint repudiandae, commodi eius unde error
-            culpa eos eaque.
+            Eu sou Luis Henrique, um desenvolvedor FullStack apaixonado por transformar ideias em soluções digitais
+            completas, construindo aplicações escaláveis, eficientes e com foco na melhor experiência para o usuário.
           </p>
-        </div>
-        <div>
-          <button type="button">Contratar</button>
           <div>
-            <!-- Icones -->
+            <a href="#" class='btn'>
+              <svg>
+                <rect x="0" y="0" fill="none" width="100%" height="100%" />
+              </svg>
+              Vamos Conversar
+            </a>
           </div>
         </div>
-        <div>
-          <img src="./src/portifolio-css/assets/image/computer-illustration.png" alt="">
-        </div>
-      </section>
 
-      <marquee behavior="" direction="right">
-        <div class="letreiro">
-          <p>HTML</p>
-          <p>CSS</p>
-          <p>JAVASCRIPT</p>
+        <div class="hero-img">
+          <figure>
+            <img src="./src/assets/computer-illustration.png" alt="Foto de um laptop com um copo de café ao lado">
+          </figure>
         </div>
-      </marquee>
-    </main>
-  </body>
+      </div>
+    </section>
+
+    <section id="sobre">
+      <div class="sobre_container">
+
+        <div class="sobre_content">
+          <h5>Sobre mim</h5>
+          <h4>Luis Henrique</h4>
+          <div class="bar"></div>
+          <h3>Curioso por natureza, sempre buscando aprender coisas novas</h3>
+          <p>
+            Apaixonado por tecnologia desde a infância, quando tive meu primeiro contato com o computador. Atuei na área de manutenção elétrica por vários anos, mas decidi seguir meu coração e concluir minha transição para o desenvolvimento web. Finalizei um curso técnico em Desenvolvimento Web com foco em Frontend, Backend e Mobile e sigo me aprofundando nos estudos em busca da minha primeira oportunidade como desenvolvedor.</p>
+        </div>
+
+        <div class="sobre_img">
+          <figure>
+            <img src="./src/assets/Foto perfil.svg" alt="foto de perfil do desenvolvedor">
+          </figure>
+        </div>
+
+      </div>
+      <div class="line"></div>
+    </section>
+
+    <section id="habilidades">
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer_content">
+      <p>© 2025 Luis Henrique. Todos os direitos reservados.</p>
+      <nav>
+        <a class="footer_links" href="#">Política de Privacidade</a>
+        <a class="footer_links" href="#">Termos de Serviço</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="./src/script.js" defer></script>
+
+</body>
+
 </html>
