@@ -17,45 +17,63 @@
 </head>
 
 <body>
-  <header id="header">
+
+  <!-- Overlay mobile menu -->
+  <div class="nav__overlay" id="nav-overlay"></div>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header" id="header">
     <nav class="nav">
-      <div class="logo">
-        <p><span>&lt;LHS/&gt;</span></br> DESENVOLVIMENTO</p>
+
+      <div class="nav__logo">
+        <p class="nav__logo-text">
+          <span class="nav__logo-tag">&lt;LHS/&gt;</span><br>
+          DESENVOLVIMENTO
+        </p>
       </div>
 
-      <div class="menu">
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Habilidades</a></li>
-          <li><a href="#">Projetos</a></li>
-          <li><a href="#">Contato</a></li>
-        </ul>
-      </div>
+      <button class="nav__hamburger" id="nav-hamburger" aria-label="Abrir menu" aria-expanded="false">
+        <span class="nav__hamburger-line"></span>
+        <span class="nav__hamburger-line"></span>
+        <span class="nav__hamburger-line"></span>
+      </button>
 
-      <div class="download" id="download">
-        <a id="download-cv" class="curriculo" href="./src/assets/doc/Curriculo_DW_v1.pdf"
+      <ul class="nav__menu" id="nav-menu">
+        <li class="nav__item"><a class="nav__link" href="#home">Home</a></li>
+        <li class="nav__item"><a class="nav__link" href="#sobre">Sobre</a></li>
+        <li class="nav__item"><a class="nav__link" href="#habilidades">Skills</a></li>
+        <li class="nav__item"><a class="nav__link" href="#projetos">Jobs</a></li>
+        <li class="nav__item"><a class="nav__link" href="#contato">Contato</a></li>
+      </ul>
+
+      <div class="nav__cta">
+        <a id="download-cv" class="nav__btn" href="./src/assets/doc/Curriculo_DW_v1.pdf"
           download="Curriculo_DW_v1.pdf">
           <svg height="40" width="200" xmlns="http://www.w3.org/2000/svg">
-            <rect class="shape" height="40" width="200" />
-            <div class="text">Baixar CV</div>
+            <rect class="nav__btn-shape" height="40" width="200" />
           </svg>
+          <span class="nav__btn-text">Baixar CV</span>
         </a>
       </div>
+
     </nav>
   </header>
 
-  <main>
-    <section id="home">
-      <div class="hero">
-        <div class="hero-text">
-          <h2>FULL STACK</h2>
-          <h1>DESENVOLVEDOR WEB</h1>
-          <p>
+  <main class="main">
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="home">
+      <div class="hero__container">
+
+        <div class="hero__content">
+          <h2 class="hero__subtitle">FULL STACK</h2>
+          <h1 class="hero__title">DESENVOLVEDOR WEB</h1>
+          <p class="hero__description">
             Eu sou Luis Henrique, um desenvolvedor FullStack apaixonado por transformar ideias em soluções digitais
-            completas, construindo aplicações escaláveis, eficientes e com foco na melhor experiência para o usuário.
+            completas, construindo aplicações de ponta a ponta, com foco na melhor experiência para o usuário.
           </p>
-          <div>
-            <a href="#" class='btn'>
+          <div class="hero__actions">
+            <a href="#contato" class="btn">
               <svg>
                 <rect x="0" y="0" fill="none" width="100%" height="100%" />
               </svg>
@@ -64,47 +82,74 @@
           </div>
         </div>
 
-        <div class="hero-img">
-          <figure>
-            <img src="./src/assets/computer-illustration.png" alt="Foto de um laptop com um copo de café ao lado">
-          </figure>
-        </div>
-      </div>
-    </section>
-
-    <section id="sobre">
-      <div class="sobre_container">
-
-        <div class="sobre_content">
-          <h5>Sobre mim</h5>
-          <h4>Luis Henrique</h4>
-          <div class="bar"></div>
-          <h3>Curioso por natureza, sempre buscando aprender coisas novas</h3>
-          <p>
-            Apaixonado por tecnologia desde a infância, quando tive meu primeiro contato com o computador. Atuei na área de manutenção elétrica por vários anos, mas decidi seguir meu coração e concluir minha transição para o desenvolvimento web. Finalizei um curso técnico em Desenvolvimento Web com foco em Frontend, Backend e Mobile e sigo me aprofundando nos estudos em busca da minha primeira oportunidade como desenvolvedor.</p>
-        </div>
-
-        <div class="sobre_img">
-          <figure>
-            <img src="./src/assets/Foto perfil.svg" alt="foto de perfil do desenvolvedor">
+        <div class="hero__image">
+          <figure class="hero__figure">
+            <img class="hero__img" src="./src/assets/computer-illustration.png"
+              alt="Ilustração de um laptop com um copo de café ao lado">
           </figure>
         </div>
 
       </div>
-      <div class="line"></div>
     </section>
 
-    <section id="habilidades">
+    <!-- ===== SOBRE ===== -->
+    <section class="about" id="sobre">
+      <div class="about__container">
+
+        <div class="about__content">
+          <h5 class="about__label">Sobre mim</h5>
+          <h4 class="about__name">Luis Henrique</h4>
+          <div class="about__watermark" aria-hidden="true"></div>
+          <h3 class="about__tagline">Curioso por natureza, sempre buscando aprender coisas novas</h3>
+          <p class="about__description">
+            Apaixonado por tecnologia desde pequeno. Atuei na área de manutenção por vários anos, mas decidi seguir meu
+            coração e iniciar minha transição para o desenvolvimento. Finalizei um curso técnico em Desenvolvimento Web
+            com foco em Frontend, Backend e Mobile e sigo me aprofundando nos estudos em busca da minha primeira
+            oportunidade como desenvolvedor.
+          </p>
+        </div>
+
+        <div class="about__image">
+          <figure class="about__figure">
+            <img class="about__img" src="./src/assets/perfil1.jpg" alt="Foto de perfil do desenvolvedor">
+          </figure>
+        </div>
+
+      </div>
+      <div class="about__divider"></div>
+    </section>
+
+    <!-- ===== HABILIDADES ===== -->
+    <section class="skills" id="habilidades">
+      <div class="skills__container">
+        <div class="skills__header">
+          <h4 class="skills__title">Minhas Habilidades</h4>
+          <p class="skills__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel voluptatum
+            reprehenderit labore illo, qui animi temporibus repellat delectus, voluptatibus dolore accusantium nam rem
+            sint debitis, non ab aperiam veritatis nesciunt.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PROJETOS ===== -->
+    <section class="projects" id="projetos">
+
+    </section>
+
+    <!-- ===== CONTATO ===== -->
+    <section class="contact" id="contato">
+
     </section>
 
   </main>
 
+  <!-- ===== FOOTER ===== -->
   <footer class="footer">
-    <div class="footer_content">
-      <p>© 2025 Luis Henrique. Todos os direitos reservados.</p>
-      <nav>
-        <a class="footer_links" href="#">Política de Privacidade</a>
-        <a class="footer_links" href="#">Termos de Serviço</a>
+    <div class="footer__container">
+      <p class="footer__copy">©2026 Luis Henrique. Todos os direitos reservados.</p>
+      <nav class="footer__nav">
+        <a class="footer__link" href="#">Política de Privacidade</a>
+        <a class="footer__link" href="#">Termos de Serviço</a>
       </nav>
     </div>
   </footer>
