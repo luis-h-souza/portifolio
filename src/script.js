@@ -1,6 +1,6 @@
 /* ===== Download CV ===== */
 document.getElementById("download-cv").addEventListener("click", function () {
-  window.location.href = "./src/assets/doc/Curriculo_DW_v1.pdf";
+  window.location.href = "./src/assets/doc/Luis_Henrique_Desenvolvedor_Junior.pdf";
 });
 
 /* ===== Menu Hambúrguer ===== */
@@ -51,3 +51,28 @@ document.getElementById("download-cv").addEventListener("click", function () {
     if (window.innerWidth >= 900) closeMenu();
   });
 })();
+
+/* ===== Formulario Contato WhatsApp ===== */
+const contactForm = document.getElementById("contact-form");
+if (contactForm) {
+  contactForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+    
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
+    
+    // Constrói a mensagem formatada para o WhatsApp
+    const whatsappMessage = `Olá! Meu nome é ${name}.\nMeu e-mail é: ${email}\n\nMensagem:\n${message}`;
+    
+    // Número atualizado conforme o HTML
+    const phoneNumber = "5519988081357";
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+    
+    // Redireciona o usuário (abrindo em nova aba)
+    window.open(whatsappUrl, "_blank");
+    
+    // Limpa o formulário após enviar o clique
+    contactForm.reset();
+  });
+}
