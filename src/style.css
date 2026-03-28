@@ -63,12 +63,7 @@ img {
   display: block;
 }
 
-/* ============================================================
-   UTILITY
-   ============================================================ */
-.u-hidden {
-  display: none;
-}
+
 
 /* ============================================================
    COMPONENT: BUTTON (btn)
@@ -101,7 +96,7 @@ img {
    ============================================================ */
 .header {
   width: 100%;
-  background-color: var(--color-bg-dark);
+  background: linear-gradient(135deg, var(--color-bg-dark) 0%, #111558 100%);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   z-index: 1000;
   padding-inline: 1rem;
@@ -128,7 +123,7 @@ img {
 }
 
 .nav__logo-text {
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 800;
   line-height: 1.4;
 }
@@ -274,9 +269,9 @@ img {
   min-height: 80vh;
   display: flex;
   align-items: center;
-  background-color: var(--color-bg-dark);
+  background: linear-gradient(135deg, var(--color-bg-dark) 0%, #111558 100%);
   color: var(--color-white);
-  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 96%, 0 100%);
   padding-block: 4rem 6rem;
 }
 
@@ -296,17 +291,18 @@ img {
 
 .hero__subtitle {
   font-family: var(--font-display);
-  font-size: 2rem;
+  font-size: 1.25rem;
   font-weight: 400;
-  letter-spacing: 4px;
+  letter-spacing: 3px;
 }
 
 .hero__title {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 900;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
   line-height: 1.1;
   margin-top: 0.25rem;
+  word-wrap: break-word;
 }
 
 .hero__description {
@@ -387,7 +383,7 @@ img {
   content: 'Sobre Mim';
   display: block;
   color: rgba(80, 116, 247, 0.2);
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   font-weight: 600;
   letter-spacing: 1px;
   left: -1rem;
@@ -595,7 +591,7 @@ img {
   background-color: var(--color-white);
   border-radius: 0.5rem;
   overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease;
 }
 
@@ -616,6 +612,7 @@ img {
   /* Fix aspect ratio for placeholders */
   aspect-ratio: 16 / 9;
   overflow: hidden;
+  position: relative;
 }
 
 .project__img {
@@ -625,32 +622,57 @@ img {
   transition: transform 0.5s ease;
 }
 
+.project__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(3, 2, 60, 0.65);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.project__description-text {
+  color: var(--color-white);
+  font-size: 0.85rem;
+  font-weight: 300;
+  text-align: center;
+  line-height: 1.4;
+  transform: translateY(20px);
+  transition: transform 0.4s ease;
+}
+
 .project__card:hover .project__img {
   transform: scale(1.05);
 }
 
-.project__footer {
-  background-color: var(--color-cta);
-  color: var(--color-white);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 1.5rem;
+.project__card:hover .project__overlay {
+  opacity: 1;
 }
 
-.project__tags {
-  font-size: 0.875rem;
-  font-weight: 300;
-  letter-spacing: 1px;
+.project__card:hover .project__description-text {
+  transform: translateY(0);
+}
+
+.project__card:hover .project__links {
+  transform: translateY(0);
 }
 
 .project__links {
   display: flex;
-  gap: 0.5rem;
+  gap: 1rem;
+  transform: translateY(20px);
+  transition: transform 0.4s ease 0.1s;
 }
 
 .project__link {
-  color: var(--color-text-muted);
+  color: var(--color-white);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -663,7 +685,7 @@ img {
 
 .project__link:hover {
   color: var(--color-white);
-  background-color: rgba(255, 255, 255, 0.3); /* Mais visível no hover */
+  background-color: var(--color-cta);
 }
 
 /* ============================================================
@@ -748,41 +770,17 @@ img {
 }
 
 .contact__item-value {
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 400;
   color: var(--color-white);
   transition: color 0.3s;
+  word-break: break-all;
 }
 
 a.contact__item-value:hover {
   color: var(--color-text-accent);
 }
 
-.contact__social {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.contact__social-label {
-  font-size: 0.875rem;
-  font-weight: 300;
-  color: var(--color-text-muted);
-}
-
-.contact__social-links {
-  display: flex;
-  gap: 1rem;
-}
-
-.contact__social-link {
-  color: var(--color-white);
-  transition: color 0.3s;
-}
-
-.contact__social-link:hover {
-  color: var(--color-text-accent);
-}
 
 /* Form Right */
 .contact__form-wrapper {
@@ -911,6 +909,10 @@ a.contact__item-value:hover {
   }
 
   /* hero */
+  .hero {
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+  }
+
   .hero__image {
     display: block;
     max-width: 22rem;
@@ -994,6 +996,10 @@ a.contact__item-value:hover {
   }
 
   /* hero: lado a lado */
+  .hero {
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  }
+
   .hero__container {
     flex-direction: row;
     justify-content: space-evenly;
@@ -1002,7 +1008,7 @@ a.contact__item-value:hover {
 
   .hero__content {
     text-align: left;
-    max-width: 32rem;
+    max-width: 36rem;
   }
 
   .hero__description {
@@ -1039,7 +1045,8 @@ a.contact__item-value:hover {
   }
 
   .hero__title {
-    font-size: 4rem;
+    font-size: 3.5rem;
+    word-wrap: normal;
   }
 
   /* about: lado a lado */

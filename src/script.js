@@ -1,8 +1,3 @@
-/* ===== Download CV ===== */
-document.getElementById("download-cv").addEventListener("click", function () {
-  window.location.href = "./src/assets/doc/Luis_Henrique_Desenvolvedor_Junior.pdf";
-});
-
 /* ===== Menu Hambúrguer ===== */
 (function () {
   const hamburger = document.getElementById("nav-hamburger");
