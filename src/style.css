@@ -571,7 +571,7 @@ img {
 }
 
 .projects__description {
-  max-width: 50ch;
+  max-width: 52ch;
   margin: 0 auto;
   font-size: 1rem;
   font-weight: 300;
@@ -591,7 +591,7 @@ img {
   background-color: var(--color-white);
   border-radius: 0.5rem;
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease;
 }
 
@@ -600,17 +600,16 @@ img {
 }
 
 .project__name {
-  font-size: 1.125rem;
+  font-size: 1rem;
   font-weight: 600;
   color: var(--color-text-accent);
   text-align: center;
-  padding: 1.5rem 1rem;
+  padding: 0.75rem 1rem;
 }
 
 .project__image-wrapper {
   width: 100%;
-  /* Fix aspect ratio for placeholders */
-  aspect-ratio: 16 / 9;
+  min-height: 420px; /* Aumentado para comportar a descrição em telas menores */
   overflow: hidden;
   position: relative;
 }
@@ -630,20 +629,22 @@ img {
   -webkit-backdrop-filter: blur(6px);
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0.75rem;
-  padding: 1rem;
+  align-items: flex-start; /* Alinhado ao topo para comportar mais texto */
+  justify-content: flex-start;
+  gap: 0.5rem;
+  padding: 1.4rem 1rem;
   opacity: 0;
   transition: opacity 0.4s ease;
+  overflow-y: auto; /* Permite scroll se o texto for muito grande */
 }
 
 .project__description-text {
   color: var(--color-white);
-  font-size: 0.85rem;
+  font-size: clamp(0.95rem, 1.8vw, 1rem);
   font-weight: 300;
-  text-align: center;
-  line-height: 1.4;
+  text-align: left;
+  line-height: 1.5;
+  margin-bottom: 0.75rem;
   transform: translateY(20px);
   transition: transform 0.4s ease;
 }
@@ -651,23 +652,35 @@ img {
 .project__details-list {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.4rem;
   color: var(--color-white);
-  font-size: 0.8rem;
+  font-size: clamp(0.85rem, 1.2vw, 0.95rem);
   font-weight: 300;
   text-align: left;
-  line-height: 1.4;
+  line-height: 1;
   list-style: none;
   padding: 0;
   margin: 0;
+  width: 100%;
   transform: translateY(20px);
   transition: transform 0.4s ease 0.05s;
 }
 
 .project__details-item {
   display: flex;
+  flex-wrap: wrap; /* Permite que o conteúdo quebre para a próxima linha se não houver espaço horizontal */
   align-items: flex-start;
   gap: 0.4rem;
+  width: 100%;
+  margin-bottom: 0.4rem;
+  line-height: 1.4;
+}
+
+.project__details-item strong {
+  font-weight: 600;
+  color: var(--color-white);
+  flex-shrink: 0;
+  /* Removido white-space: nowrap para permitir flexibilidade total se a tela for minúscula */
 }
 
 .project__details-item::before {
@@ -705,7 +718,12 @@ img {
 
 .project__links {
   display: flex;
-  gap: 1rem;
+  justify-content: center;
+  align-self: center; /* Centraliza no eixo horizontal do overlay column */
+  margin-top: auto; /* Empurra para o final se houver espaço */
+  padding-top: 1rem;
+  gap: 1.5rem;
+  width: 100%;
   transform: translateY(20px);
   transition: transform 0.4s ease 0.1s;
 }
@@ -715,7 +733,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(255, 255, 255, 0.15); /* Círculo branco transparente */
+  background-color: rgba(255, 255, 255, 0.15);
   border-radius: 50%;
   width: 36px;
   height: 36px;
@@ -941,13 +959,11 @@ a.contact__item-value:hover {
    ============================================================ */
 @media (min-width: 576px) {
 
-  /* nav */
   .nav__logo-text,
   .nav__logo-tag {
     font-size: 1.125rem;
   }
 
-  /* hero */
   .hero {
     clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
   }
@@ -978,8 +994,6 @@ a.contact__item-value:hover {
     max-width: 12rem;
   }
 
-
-  /* about */
   .about__watermark::before {
     font-size: 5rem;
   }
@@ -1034,7 +1048,6 @@ a.contact__item-value:hover {
     font-size: 0.875rem;
   }
 
-  /* hero: lado a lado */
   .hero {
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
   }
@@ -1072,12 +1085,10 @@ a.contact__item-value:hover {
     --slider-item-width: 150px;
   }
 
-  /* Aumentar o fade no desktop para suavizar a largura maior */
   .skills__slider::before,
   .skills__slider::after {
     width: 200px;
   }
-
 
   .hero__subtitle {
     font-size: 2.5rem;
@@ -1088,7 +1099,6 @@ a.contact__item-value:hover {
     word-wrap: normal;
   }
 
-  /* about: lado a lado */
   .about {
     max-width: 70%;
   }
@@ -1114,7 +1124,6 @@ a.contact__item-value:hover {
     padding-right: 1.5rem;
   }
 
-  /* footer: linha única */
   .footer__container {
     flex-direction: row;
     justify-content: space-between;
@@ -1124,12 +1133,10 @@ a.contact__item-value:hover {
     padding-inline: 1.5rem;
   }
   
-  /* projects */
   .projects__grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  /* contact */
   .contact__content {
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
