@@ -5,6 +5,10 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta title="Portfólio de Luis Henrique, Desenvolvedor Web">
+  <meta name="description"
+    content="Página voltada a apresentar projetos e habilidades de Luis Henrique, Desenvolvedor Web">
+  <meta name="author" content="Luis Henrique">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -43,9 +47,12 @@
         <li class="nav__item"><a class="nav__link" href="#home">Início</a></li>
         <li class="nav__item"><a class="nav__link" href="#sobre">Sobre</a></li>
         <li class="nav__item"><a class="nav__link" href="#habilidades">Habilidades</a></li>
+        <li class="nav__item"><a class="nav__link" href="#projetos">Projetos</a></li>
         <li class="nav__item"><a class="nav__link" href="#contato">Contato</a></li>
         <li class="nav__item nav__item--cta">
-          <a id="download-cv" class="nav__link nav__link--btn" href="./src/assets/doc/Luis_Henrique_Desenvolvedor_Junior.pdf" download="Luis_Henrique_Desenvolvedor_Junior.pdf">
+          <a id="download-cv" class="nav__link nav__link--btn"
+            href="./src/assets/doc/Luis_Henrique_Desenvolvedor_Junior.pdf"
+            download="Luis_Henrique_Desenvolvedor_Junior.pdf">
             Baixar CV
           </a>
         </li>
@@ -77,7 +84,7 @@
         <div class="hero__image">
           <figure class="hero__figure">
             <img class="hero__img" src="./src/assets/computer-illustration.png"
-              alt="Ilustração de um laptop com um copo de café ao lado">
+              alt="Ilustração de um laptop com um copo de café ao lado" loading="lazy">
           </figure>
         </div>
 
@@ -94,16 +101,26 @@
           <div class="about__watermark" aria-hidden="true"></div>
           <h3 class="about__tagline">Curioso por natureza, sempre buscando aprender coisas novas</h3>
           <p class="about__description">
-            Apaixonado por tecnologia desde pequeno. Atuei na área de manutenção por vários anos, mas decidi seguir meu
-            coração e iniciar minha transição para o desenvolvimento. Finalizei um curso técnico em Desenvolvimento Web
-            com foco em Frontend, Backend e Mobile e sigo me aprofundando nos estudos em busca da minha primeira
-            oportunidade como desenvolvedor.
+            Sou desenvolvedor com foco em construção de interfaces web modernas,
+            responsivas e bem estruturadas.
+          </p>
+          <p class="about__description">
+            Tenho experiência prática com HTML, CSS e JavaScript puro, priorizando fundamentos
+            sólidos como semântica, organização de código e performance.
+          </p>
+          <p class="about__description">
+            Atualmente, estou evoluindo minhas habilidades através de projetos próprios,
+            simulando cenários reais de desenvolvimento, com foco em qualidade e boas práticas.
+          </p>
+          <p class="about__description">
+            Busco minha primeira oportunidade como desenvolvedor para contribuir
+            em projetos reais e continuar evoluindo tecnicamente.
           </p>
         </div>
 
         <div class="about__image">
           <figure class="about__figure">
-            <img class="about__img" src="./src/assets/perfil1.jpg" alt="Foto de perfil do desenvolvedor">
+            <img class="about__img" src="./src/assets/perfil1.jpg" alt="Foto de perfil do desenvolvedor" loading="lazy">
           </figure>
         </div>
 
@@ -116,8 +133,8 @@
       <div class="skills__container">
         <div class="skills__header">
           <h4 class="skills__title">Minhas Habilidades</h4>
-          <h5 class="projects__subtitle"><small><i>Principais focos: Front-end com React, consumo de APIs e construção
-                de interfaces responsivas.</i></small></h5>
+          <h5 class="projects__subtitle"><small><i>Foco em fundamentos sólidos de desenvolvimento,
+                com atenção à performance, estrutura e legibilidade do código.</i></small></h5>
           <p class="skills__description">Tecnologias e ferramentas que utilizo no dia a dia para desenvolver aplicações
             web completas, com foco em interfaces responsivas, integração com APIs e soluções práticas para problemas
             reais.</p>
@@ -232,109 +249,110 @@
         </div>
 
         <div class="projects__grid">
-          <!-- Card 1 -->
+          <!-- Delícias da Lê -->
           <article class="project__card">
-            <h5 class="project__name">Landing Page para Confeitaria</h5>
+            <h5 class="project__name">Delícias da Lê</h5>
             <div class="project__image-wrapper">
-              <img src="./src/assets/delicias-da-le.png" alt="Landing Page para confeitaria" class="project__img">
+              <img src="./src/assets/delicias-da-le.png" alt="Landing Page para confeitaria" class="project__img"
+                loading="lazy">
               <div class="project__overlay">
-                <p class="project__description-text">Landing page desenvolvida para uma confeitaria, focada em atrair clientes e facilitar o contato direto. Utilizado HTML, Tailwind, JavaScript.</p>
+                <p class="project__description-text">Landing page desenvolvida para uma confeitaria local, focada em
+                  atrair
+                  clientes e facilitar o contato direto.</p>
+                <ul class="project__details-list">
+                  <li class="project__details-item"><strong>Objetivo:</strong> construir uma interface atrativa para
+                    exibição de produtos</li>
+                  <li class="project__details-item"><strong>Tecnologias:</strong> HTML, CSS, JavaScript</li>
+                  <li class="project__details-item"><strong>Foco técnico:</strong> responsividade, organização de layout
+                    e semântica HTML</li>
+                  <li class="project__details-item"><strong>Diferencial:</strong> estrutura pensada para conversão
+                    (visual + clareza)</li>
+                </ul>
                 <div class="project__links">
-                <a href="https://www.deliciasdale.com.br" target="_blank" class="project__link"
-                  aria-label="Ver projeto">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
-                    class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd"
-                      d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5" />
-                    <path fill-rule="evenodd"
-                      d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z" />
-                  </svg>
-                </a>
-                <a href="https://github.com/luis-h-souza/delicias-da-le" target="_blank" class="project__link"
-                  aria-label="Ver no Github">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
-                    class="bi bi-github" viewBox="0 0 16 16">
-                    <path
-                      d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8" />
-                  </svg>
-                </a>
-              </div>
-              </div>
-            </div>
-          </article>
-
-          <!-- Card 2 -->
-          <article class="project__card">
-            <h5 class="project__name">Landing Pages</h5>
-            <div class="project__image-wrapper">
-              <img src="./src/assets/landing-pages.png" alt="Landing Pages" class="project__img">
-              <div class="project__overlay">
-                <p class="project__description-text">
-                  Coleção de landing pages com foco em alta conversão e design responsivo para diversos nichos. Utilizado HTML, CSS, Tailwind, JavaScript.
-                </p>
-                <div class="project__links">
-                <a href="https://luis-h-souza.github.io/pages/" target="_blank" class="project__link"
-                  aria-label="Ver projeto">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
-                    class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd"
-                      d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5" />
-                    <path fill-rule="evenodd"
-                      d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z" />
-                  </svg>
-                </a>
-                <a href="https://github.com/luis-h-souza/pages" target="_blank" class="project__link"
-                  aria-label="Ver no Github">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
-                    class="bi bi-github" viewBox="0 0 16 16">
-                    <path
-                      d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8" />
-                  </svg>
-                </a>
-              </div>
-              </div>
-            </div>
-          </article>
-
-          <!-- Card 3 -->
-          <article class="project__card">
-            <h5 class="project__name">Restaurante MVC</h5>
-            <div class="project__image-wrapper">
-              <img src="./src/assets/restaurante-mvc.png" alt="Restaurante MVC" class="project__img">
-              <div class="project__overlay">
-                <p class="project__description-text">Sistema de gerenciamento de restaurante utilizando arquitetura MVC com PHP e banco de dados MySQL. Utilizado também  HTML, Bootstrap e JavaScript.</p>
-                <div class="project__links">
-                <a href="https://restaurante-mvc.free.nf/login" target="_blank" class="project__link"
-                  aria-label="Ver projeto">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
-                    class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd"
-                      d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5" />
-                    <path fill-rule="evenodd"
-                      d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z" />
-                  </svg>
-                </a>
-                <a href="https://github.com/luis-h-souza/restaurante-mvc" target="_blank" class="project__link"
-                  aria-label="Ver no Github">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
-                    class="bi bi-github" viewBox="0 0 16 16">
-                    <path
-                      d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8" />
-                  </svg>
-                </a>
-              </div>
-          </article>
-
-          <!-- Card 4 -->
-          <article class="project__card">
-            <h5 class="project__name">Projeto Integrador</h5>
-            <div class="project__image-wrapper">
-              <img src="./src/assets/projeto-integrador-coworking.png" alt="Projeto Integrador" class="project__img">
-              <div class="project__overlay">
-                <p class="project__description-text">Plataforma web desenvolvida para gestão de espaços de coworking, permitindo agendamentos e controle administrativo. Utilizado HTML, CSS, Bootstrap, JavaScript.</p>
-                <div class="project__links">
-                  <a href="https://projeto-integrador-cv0f3ubvc-luishsouzas-projects.vercel.app/" target="_blank" class="project__link"
+                  <a href="https://www.deliciasdale.com.br" target="_blank" class="project__link"
                     aria-label="Ver projeto">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                      class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd"
+                        d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5" />
+                      <path fill-rule="evenodd"
+                        d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z" />
+                    </svg>
+                  </a>
+                  <a href="https://github.com/luis-h-souza/delicias-da-le" target="_blank" class="project__link"
+                    aria-label="Ver no Github">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                      class="bi bi-github" viewBox="0 0 16 16">
+                      <path
+                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Restaurante MVC -->
+          <article class="project__card">
+            <h5 class="project__name">Sistema de Restaurantes</h5>
+            <div class="project__image-wrapper">
+              <img src="./src/assets/restaurante-mvc.png" alt="Restaurante MVC" class="project__img" loading="lazy">
+              <div class="project__overlay">
+                <p class="project__description-text">Aplicação web estruturada utilizando padrão MVC,
+                  com separação clara entre regras de negócio, interface e controle.</p>
+                <ul class="project__details-list">
+                  <li class="project__details-item"><strong>Objetivo:</strong>Simular uma aplicação organizada seguindo
+                    arquitetura MVC</li>
+                  <li class="project__details-item"><strong>Tecnologias:</strong> PHP, HTML, Bootstrap, JavaScript,
+                    MySQL</li>
+                  <li class="project__details-item"><strong>Foco técnico:</strong>Organização de código e separação de
+                    responsabilidades</li>
+                  <li class="project__details-item"><strong>Diferencial:</strong>Aplicação de padrão arquitetural
+                    utilizado no mercado</li>
+                  <li class="project__details-item"><strong>Extras:</strong>Manipulação de dados e fluxo de aplicação
+                    estruturado</li>
+                </ul>
+                <div class="project__links">
+                  <a href="https://restaurante-mvc.free.nf/login" target="_blank" class="project__link"
+                    aria-label="Ver projeto">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                      class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd"
+                        d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5" />
+                      <path fill-rule="evenodd"
+                        d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z" />
+                    </svg>
+                  </a>
+                  <a href="https://github.com/luis-h-souza/restaurante-mvc" target="_blank" class="project__link"
+                    aria-label="Ver no Github">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                      class="bi bi-github" viewBox="0 0 16 16">
+                      <path
+                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8" />
+                    </svg>
+                  </a>
+                </div>
+          </article>
+
+          <!-- Projeto Integrador -->
+          <article class="project__card">
+            <h5 class="project__name">Sistema Web Integrado</h5>
+            <div class="project__image-wrapper">
+              <img src="./src/assets/projeto-integrador-coworking.png" alt="Projeto Integrador" class="project__img"
+                loading="lazy">
+              <div class="project__overlay">
+                <p class="project__description-text">Projeto desenvolvido com foco na construção de uma aplicação web
+                  completa, desenvolvida para gestão de espaços de coworking,
+                  permitindo agendamentos e controle administrativo. Utilizado HTML, CSS, Bootstrap, JavaScript.</p>
+                <ul class="project__details-list">
+                  <li class="project__details-item"><strong>Objetivo:</strong>Aplicar conhecimentos em um projeto mais estruturado</li>
+                  <li class="project__details-item"><strong>Tecnologias:</strong>HTML, CSS, Bootstrap, JavaScript</li>
+                  <li class="project__details-item"><strong>Foco técnico:</strong>Organização, estrutura e integração de funcionalidades</li>
+                  <li class="project__details-item"><strong>Diferencial:</strong>Abordagem mais próxima de um cenário real de desenvolvimento</li>
+                </ul>
+                <div class="project__links">
+                  <a href="https://projeto-integrador-cv0f3ubvc-luishsouzas-projects.vercel.app/" target="_blank"
+                    class="project__link" aria-label="Ver projeto">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
                       class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
                       <path fill-rule="evenodd"
@@ -355,6 +373,50 @@
               </div>
             </div>
           </article>
+
+          <!-- Landing Pages -->
+          <article class="project__card">
+            <h5 class="project__name">Coleção de Landing Pages</h5>
+            <div class="project__image-wrapper">
+              <img src="./src/assets/landing-pages.png" alt="Landing Pages" class="project__img" loading="lazy">
+              <div class="project__overlay">
+                <p class="project__description-text">
+                  Conjunto de páginas desenvolvidas para prática de diferentes estruturas
+                  de layout e componentes de interface.
+                </p>
+                <ul class="project__details-list">
+                  <li class="project__details-item"><strong>Objetivo:</strong>Explorar variações de design e construção
+                    de páginas</li>
+                  <li class="project__details-item"><strong>Tecnologias:</strong>HTML, CSS, JavaScript</li>
+                  <li class="project__details-item"><strong>Foco técnico:</strong>Reutilização de layout, organização
+                    de código e responsividade</li>
+                  <li class="project__details-item"><strong>Diferencial:</strong>Abordagem prática com múltiplos
+                    cenários de interface</li>
+                </ul>
+                <div class="project__links">
+                  <a href="https://luis-h-souza.github.io/pages/" target="_blank" class="project__link"
+                    aria-label="Ver projeto">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                      class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd"
+                        d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5" />
+                      <path fill-rule="evenodd"
+                        d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z" />
+                    </svg>
+                  </a>
+                  <a href="https://github.com/luis-h-souza/pages" target="_blank" class="project__link"
+                    aria-label="Ver no Github">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                      class="bi bi-github" viewBox="0 0 16 16">
+                      <path
+                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
         </div>
       </div>
     </section>
@@ -368,7 +430,7 @@
           <!-- Info Left -->
           <div class="contact__info">
             <h4 class="contact__subtitle">Contato</h4>
-            <h5 class="contact__label">Vamos Conversar</h5>
+            <h5 class="contact__label">Entre em contato para conversarmos sobre como posso contribuir.</h5>
 
             <ul class="contact__list">
               <li class="contact__item">
